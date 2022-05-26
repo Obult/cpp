@@ -1,4 +1,4 @@
-NAME		= out
+NAME		= megaphone
 OBJ			= *.o
 CC			= c++
 RM			= rm -f
