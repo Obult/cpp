@@ -12,7 +12,7 @@ class Contact {
 	public:
 		Contact();
 		~Contact();
-		int SetContact();
+		int		SetContact();
 		void	ViewContact(Contact);
 };
 

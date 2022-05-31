@@ -6,7 +6,7 @@
 
 class Phonebook {
 	private:
-		Contact	contacts[8];
+		Contact	_contacts[8];
 	public:
 		Phonebook();
 		~Phonebook();
