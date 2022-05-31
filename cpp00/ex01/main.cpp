@@ -1,12 +1,14 @@
 #include <iostream>
 
-int	main(int argc, char **argv)
+void lol(int j);
+int	main(void)
 {
-	int	i;
-	int j;
+	// in t	i;
+	// int j;
 
-	i = 1;
-	if (argc == 1)
-		return (1);
+	// i = 1;
+	// if (argc == 1)
+	// 	return (1);
+	lol(3);
 	return (0);
 }
