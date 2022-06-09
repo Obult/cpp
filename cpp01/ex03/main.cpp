@@ -1,5 +1,7 @@
 #include <HumanA.hpp>
 #include <HumanB.hpp>
+#include <iostream>
+#include <Weapon.hpp>
 
 int main()
 {
@@ -16,6 +18,7 @@ int main()
 		jim.setWeapon(club);
 		jim.attack();
 		club.setType("some other type of club");
+		std::cout << club.getType() << std::endl;
 		jim.attack();
 	}
 	return 0;
