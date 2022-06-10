@@ -8,11 +8,8 @@ HumanB::HumanB(std::string name) {
 HumanB::~HumanB() {
 }
 
-// HumanB::HumanB(HumanB &obj) {
-// 	weapon = 
-// }
-
 void	HumanB::attack() {
+	if (this->_weapon != NULL)
 	std::cout << this->_name << " attacks with their " << this->_weapon->getType() << std::endl;
 }
 
