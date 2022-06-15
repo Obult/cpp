@@ -1,8 +1,8 @@
-NAME		= bookphone
+NAME		= eaters.exe
 SRC			= $(wildcard *.cpp)
 CC			= c++
 RM			= rm -f
-HEADER		= -I headers/
+HEADER		= -I .
 CFLAGS		= -Wall -Werror -Wextra
 OBJ = $(SRC:%.cpp=%.o)
 

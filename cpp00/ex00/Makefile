@@ -1,13 +1,14 @@
 NAME		= megaphone
-OBJ			= *.o
+SRC			= $(wildcard *.cpp)
 CC			= c++
 RM			= rm -f
-HEADER		= -I headers/
+HEADER		= -I
 CFLAGS		= -Wall -Werror -Wextra
+OBJ = $(SRC:%.cpp=%.o)
 
 all:		${NAME}
 
-%.o:%.cpp
+%.o:		%.cpp
 				$(CC) -c $(CFLAGS) $(HEADER) $< -o $@
 
 clean:
@@ -19,6 +20,6 @@ fclean:		clean
 re:			fclean all
 
 ${NAME}:	${OBJ}
-				${CC} ${CFLAGS} -o $@ $^
+				${CC} ${OBJ} -o $(NAME)
 
 .PHONY: all clean fclean re

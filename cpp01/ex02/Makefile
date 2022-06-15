@@ -1,8 +1,8 @@
-NAME		= bookphone
+NAME		= brain
 SRC			= $(wildcard *.cpp)
 CC			= c++
 RM			= rm -f
-HEADER		= -I headers/
+HEADER		= 
 CFLAGS		= -Wall -Werror -Wextra
 OBJ = $(SRC:%.cpp=%.o)
 
