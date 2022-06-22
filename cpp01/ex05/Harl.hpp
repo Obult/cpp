@@ -14,7 +14,9 @@ class Harl
 {
 private:
     std::string str_levels[4];
-    void    (Harl::* levels [4])();
+    typedef void (Harl::*complaints)();
+    // void    (Harl::*levels [4])();
+    complaints  levels[4];
     void    debug( void );
     void    info ( void );
     void    warning( void );

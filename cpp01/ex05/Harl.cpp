@@ -2,10 +2,10 @@
 #include <iostream>
 
 Harl::Harl() {
-    levels[DEBUG] = debug;
-    levels[INFO] = info;
-    levels[WARNING] = warning;
-    levels[ERROR] = error;
+    levels[DEBUG] = &Harl::debug;
+    levels[INFO] = &Harl::info;
+    levels[WARNING] = &Harl::warning;
+    levels[ERROR] = &Harl::error;
     str_levels[0] = "DEBUG";
     str_levels[1] = "INFO";
     str_levels[2] = "WARNING";
@@ -14,6 +14,8 @@ Harl::Harl() {
 
 Harl::~Harl() {
 }
+
+// jump table!!!
 
 void    Harl::debug(void){
     std::cout << "I love having extra bacon for my 7XL-double-cheese-triple-pickle-specialketchup burger. I really do!" << std::endl;
@@ -32,5 +34,7 @@ void    Harl::error(void){
 }
 
 void Harl::complain(std::string level) {
-    
+    for (int i = 0; i < 4; i++)
+        if (level == str_levels[i])
+            (this->*levels[i])();
 }
