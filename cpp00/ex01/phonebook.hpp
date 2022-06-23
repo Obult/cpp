@@ -1,8 +1,15 @@
+#ifndef PHONEBOOK_HPP
+# define PHONEBOOK_HPP
 
-class   Contact {
-
-} contact;
+#include <string>
+# include <contact.hpp>
 
 class   Phonebook {
-    contact contacts[8];
-} phbook;
+    private:
+        Contact contacts[8];
+    public:
+        void    Phonebook::SetContact(Contact contact, int index);
+        void    Phonebook::PrintContact(int index);
+};
+
+#endif
