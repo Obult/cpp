@@ -10,6 +10,8 @@ class Phonebook {
 	public:
 		Phonebook();
 		~Phonebook();
+        void    Phonebook::SetContact(Contact contact, int index);
+        void    Phonebook::PrintContacts();
 };
 
 #endif
