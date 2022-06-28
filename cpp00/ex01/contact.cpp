@@ -1,5 +1,6 @@
 #include <contact.hpp>
 #include <iostream>
+#include <iomanip>
 
 Contact::Contact() {
 
@@ -49,12 +50,12 @@ void Contact::SetDarkestSecret(std::string darkestsecret) {
 }
 
 void	Contact::PrintContact() {
-	std::cout <<
-		this->_first_name << std::endl <<
-		this->_last_name << std::endl <<
-		this->_nickname << std::endl <<
-		this->_phone_number << std::endl <<
-		this->_darkest_secret << std::endl;
+	std::cout << std::left <<
+		std::setw(16)<< "first name:" << this->_first_name << std::endl <<
+		std::setw(16)<< "last name:" << this->_last_name << std::endl <<
+		std::setw(16)<< "nickname:" << this->_nickname << std::endl <<
+		std::setw(16)<< "phone number:" << this->_phone_number << std::endl <<
+		std::setw(16)<< "darkest secret:" << this->_darkest_secret << std::endl << std::right;
 }
 
 // void	Contact::ViewContact(Contact contact) {

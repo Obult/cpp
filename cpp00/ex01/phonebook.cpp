@@ -73,8 +73,8 @@ void    phoneloop() {
         else if (user_input == "SEARCH") {
             book.PrintContacts();
             getline(std::cin, user_input);
-            if (user_input.length() != 1 || user_input[0] > '9' || user_input[0] < '0')
-                std::cout << "relevant behaviour" << std::endl;
+            if (user_input.length() != 1 || user_input[0] > '7' || user_input[0] < '0')
+                std::cout << "False input, nbr between 0 and 7 required!" << std::endl;
             else
                 book.PrintContact(user_input[0] - '0');
         }
@@ -82,6 +82,6 @@ void    phoneloop() {
             break ;
         }
         else
-            std::cout << "this is an error message" << std::endl;
+            std::cout << "False input, ADD, SEARCH and EXIT are alowed!" << std::endl;
     }
 }
